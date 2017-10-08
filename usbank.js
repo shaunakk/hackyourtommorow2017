@@ -1,6 +1,6 @@
 var http = require('http');
 
-var mydata = {
+var userData = {
   "OperatingCompanyIdentifier": "815",
   "ProductCode": "DDA",
   "PrimaryIdentifier": "00000000000000822943114"
