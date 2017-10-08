@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var https = require('https')
 var parsedJson
-var wats
+var wats = "NOT LOADED YET TRY AGAIN"
 var parsedJsonHist
 var running = false
 app.set('port', (process.env.PORT || 5000));
@@ -30,14 +30,16 @@ var parameters = {
     }
   }
 };
+setTimeout(function() {
+  natural_language_understanding.analyze(parameters, function(err, response) {
+    if (err)
+      console.log('error:', err);
+    else
+      console.log(JSON.stringify(response, null, 2));
+    wats = JSON.stringify(response)
+  });
+}, 20000)
 
-natural_language_understanding.analyze(parameters, function(err, response) {
-  if (err)
-    console.log('error:', err);
-  else
-    console.log(JSON.stringify(response, null, 2));
-  wats = JSON.stringify(response)
-});
 
 request.post(
   'https://api119622live.gateway.akana.com:443/account/transactions', {
