@@ -20,13 +20,12 @@ fs.readFile('./mcc.json', 'utf8', function(err, data) {
 });
 var mccArray
 
-function getData(num) {
-  for (i = 0; i < mccData.length; i++) {
-    if (mccData[i].mcc == num) mccArray = mccData[i].edited_description
-    console.log(mccData[i].edited_description)
-  }
-
-  return mccArray
+function getData(mcc) {
+  return mccData.filter(
+    function(data) {
+      return mccData.mcc == mcc
+    }
+  );
 }
 var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 var natural_language_understanding = new NaturalLanguageUnderstandingV1({
@@ -75,13 +74,22 @@ request.post(
       parsedJsonHist = body
       historystr = ""
       for (i = 0; i < parsedJsonHist.MonetaryTransactionResponseList.length; i++) {
+        find = mccData.filter(function(x) {
+          return x.mcc == parsedJsonHist.MonetaryTransactionResponseList[i].StandardIndustryCode.toString().slice(-4);
+        })
+        if (find.length == 1) {
+          if (find[0].hasOwnProperty("edited_description")) {
+            find = find[0].edited_description
+          }
+        } else find = "No Description"
+
+
         jsondata.push({
           "expense": parsedJsonHist.MonetaryTransactionResponseList[i].TransactionDescription,
           "expenseType": parsedJsonHist.MonetaryTransactionResponseList[i].StandardIndustryCode,
           "date": parsedJsonHist.MonetaryTransactionResponseList[i].EffectiveDate,
           "amount": parsedJsonHist.MonetaryTransactionResponseList[i].PostedAmount,
-          //  "mcc": getData(parseInt(parsedJsonHist.MonetaryTransactionResponseList[i].StandardIndustryCode))
-
+          "mcc": find
 
         })
 
@@ -225,7 +233,6 @@ function PostCode(codestring) {
 }
 
 app.get('/person', function(req, res) {
-
   res.send(parsedJson)
 
 
