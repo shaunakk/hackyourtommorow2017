@@ -80,7 +80,7 @@ request.post(
           "expenseType": parsedJsonHist.MonetaryTransactionResponseList[i].StandardIndustryCode,
           "date": parsedJsonHist.MonetaryTransactionResponseList[i].EffectiveDate,
           "amount": parsedJsonHist.MonetaryTransactionResponseList[i].PostedAmount,
-          "mcc": getData(parseInt(parsedJsonHist.MonetaryTransactionResponseList[i].StandardIndustryCode))
+          //  "mcc": getData(parseInt(parsedJsonHist.MonetaryTransactionResponseList[i].StandardIndustryCode))
 
 
         })
