@@ -37,7 +37,9 @@ var natural_language_understanding = new NaturalLanguageUnderstandingV1({
 var parameters = {
   'url': 'hackyourtommorow.herokuapp.com/historydata',
   'features': {
-    'categories': {},
+    'categories': {
+      'limit': 5
+    },
     'entities': {},
     'keywords': {
       'sentiment': false,
@@ -57,7 +59,7 @@ setTimeout(function() {
       console.log(JSON.stringify(response, null, 2));
     wats = JSON.stringify(response)
   });
-}, 20000)
+}, 40000)
 
 
 request.post(
