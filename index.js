@@ -1,12 +1,79 @@
 var express = require('express');
 var app = express();
+var https = require('https')
 var parsedJson
+var parsedJsonHist
 var running = false
 var events = require('events');
 app.set('port', (process.env.PORT || 5000));
 var eventEmitter = new events.EventEmitter();
+var request = require('request');
 
+request.post(
+  'https://api119622live.gateway.akana.com:443/account/transactions', {
+    json: {
+      "OperatingCompanyIdentifier": "815",
+      "ProductCode": "DDA",
+      "PrimaryIdentifier": "00000000000000822943114"
+    }
+  },
+  function(error, response, body) {
+    if (!error && response.statusCode == 200) {
+      console.log(body)
+      parsedJsonHist = body
+    }
+  }
+);
 
+// function PostCodeHistory(codestring) {
+//   var userData = {
+//     "OperatingCompanyIdentifier": "815",
+//     "ProductCode": "DDA",
+//     "PrimaryIdentifier": "00000000000000822943114"
+//   };
+//   running = true
+//   // Build the post string from an object
+//   var post_data = JSON.stringify(userData);
+//
+//   // An object of options to indicate where to post to
+//   var post_options = {
+//     host: 'api119622live.gateway.akana.com/account/transactions',
+//     port: '443',
+//     path: '/account/transactions',
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Content-Length': Buffer.byteLength(post_data)
+//     }
+//   };
+//
+//   // Set up the request
+//   var post_req = https.request(post_options, function(res) {
+//     console.log("This is statusCode" + res.statusCode);
+//     res.setEncoding('utf8');
+//     res.on('data', function(chunk) {
+//       parsedJsonHist = JSON.parse(chunk, null);
+//       console.log(chunk)
+//
+//     });
+//     res.on('error', function(e) {
+//       console.log('Error Response: ' + chunk);
+//       return 'Error Response: ' + chunk
+//     });
+//   });
+//
+//
+//
+//   // post the data
+//   post_req.write(post_data);
+//   parsedJsonHist = JSON.stringify(parsedJsonHist)
+//
+//   post_req.end();
+//
+//
+//
+//
+// }
 app.use(express.static(__dirname + '/build'));
 
 // views is directory for all template files
@@ -47,6 +114,7 @@ function PostCode(codestring) {
     res.setEncoding('utf8');
     res.on('data', function(chunk) {
       parsedJson = JSON.parse(chunk, null);
+      console.log(chunk)
 
     });
     res.on('error', function(e) {
@@ -60,7 +128,6 @@ function PostCode(codestring) {
   // post the data
   post_req.write(post_data);
   parsedJson = JSON.stringify(parsedJson)
-
   post_req.end();
 
 
@@ -68,16 +135,24 @@ function PostCode(codestring) {
 
 }
 
-app.get('/', function(req, res) {
+app.get('/person', function(req, res) {
 
   res.send(parsedJson)
 
 
 })
+app.get('/history', function(req, res) {
+
+  res.send(parsedJsonHist)
+
+
+})
 setInterval(function() {
+  //  PostCode(JSON.stringify(userData))
 
 }, 1000)
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 PostCode(JSON.stringify(userData))
+// PostCodeHistory(JSON.stringify(userData))
