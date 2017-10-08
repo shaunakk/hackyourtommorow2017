@@ -26,7 +26,8 @@ request.post(
         jsondata.push({
           "expense": parsedJsonHist.MonetaryTransactionResponseList[i].Description1,
           "expenseType": parsedJsonHist.MonetaryTransactionResponseList[i].TransactionLevelCode,
-          "date": parsedJsonHist.MonetaryTransactionResponseList[i].EffectiveDate
+          "date": parsedJsonHist.MonetaryTransactionResponseList[i].EffectiveDate,
+          "amount": parsedJsonHist.MonetaryTransactionResponseList[i].PostedAmount
         })
       }
     }
