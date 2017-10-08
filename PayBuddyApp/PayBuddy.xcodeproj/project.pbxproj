@@ -1,0 +1,822 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18C01F8A253AAD5F311E591F /* Pods_PayBuddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3875701D0A184EC835C419C /* Pods_PayBuddyUITests.framework */; };
+		755FD2901F899136004B3772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755FD28F1F899136004B3772 /* AppDelegate.swift */; };
+		756777DC1F89A15B00A6D4CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 756777DB1F89A13900A6D4CB /* GoogleService-Info.plist */; };
+		756777DE1F89ACF100A6D4CB /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756777DD1F89ACF100A6D4CB /* MainTVC.swift */; };
+		756777E01F89AFF700A6D4CB /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756777DF1F89AFF700A6D4CB /* CustomTabBarController.swift */; };
+		756777E21F89B17C00A6D4CB /* SchedulePaymentsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756777E11F89B17C00A6D4CB /* SchedulePaymentsTVC.swift */; };
+		756778211F89DB6C00A6D4CB /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756778201F89DB6C00A6D4CB /* Expense.swift */; };
+		756778231F89DC4800A6D4CB /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756778221F89DC4800A6D4CB /* PaymentCell.swift */; };
+		756778251F89ED8E00A6D4CB /* ExpensesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756778241F89ED8E00A6D4CB /* ExpensesVC.swift */; };
+		756778661F8A3FF500A6D4CB /* TurnOffVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756778651F8A3FF500A6D4CB /* TurnOffVC.swift */; };
+		756778681F8A719600A6D4CB /* SchedulePaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756778671F8A719600A6D4CB /* SchedulePaymentVC.swift */; };
+		75D9CFD71F8988FC00FD4046 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CFD61F8988FC00FD4046 /* ViewController.swift */; };
+		75D9CFDA1F8988FC00FD4046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D9CFD81F8988FC00FD4046 /* Main.storyboard */; };
+		75D9CFDD1F8988FC00FD4046 /* PayBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CFDB1F8988FC00FD4046 /* PayBuddy.xcdatamodeld */; };
+		75D9CFDF1F8988FC00FD4046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D9CFDE1F8988FC00FD4046 /* Assets.xcassets */; };
+		75D9CFE21F8988FC00FD4046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D9CFE01F8988FC00FD4046 /* LaunchScreen.storyboard */; };
+		75D9CFED1F8988FC00FD4046 /* PayBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CFEC1F8988FC00FD4046 /* PayBuddyTests.swift */; };
+		75D9CFF81F8988FC00FD4046 /* PayBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CFF71F8988FC00FD4046 /* PayBuddyUITests.swift */; };
+		75D9D0061F89890700FD4046 /* SignInUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9D0051F89890700FD4046 /* SignInUpVC.swift */; };
+		C5EC8AE2288E7290E4D9840A /* Pods_PayBuddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFC9B9BE6D8E19E7CBB6111 /* Pods_PayBuddyTests.framework */; };
+		E5291FCCDF038A3BC02D241D /* Pods_PayBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE700CC1F49646B8CBBC0655 /* Pods_PayBuddy.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75D9CFE91F8988FC00FD4046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75D9CFC91F8988FC00FD4046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75D9CFD01F8988FC00FD4046;
+			remoteInfo = PayBuddy;
+		};
+		75D9CFF41F8988FC00FD4046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75D9CFC91F8988FC00FD4046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75D9CFD01F8988FC00FD4046;
+			remoteInfo = PayBuddy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1DF485D088A8D62AD96C07E7 /* Pods-PayBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayBuddy/Pods-PayBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		68CE1D5D5175DA2273DF7EA7 /* Pods-PayBuddyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayBuddyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayBuddyTests/Pods-PayBuddyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74724FE34A5A3EF2E7A4301B /* Pods-PayBuddyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayBuddyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayBuddyUITests/Pods-PayBuddyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		755FD28F1F899136004B3772 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		756777DA1F899FC900A6D4CB /* PayBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PayBuddy.entitlements; sourceTree = "<group>"; };
+		756777DB1F89A13900A6D4CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		756777DD1F89ACF100A6D4CB /* MainTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
+		756777DF1F89AFF700A6D4CB /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		756777E11F89B17C00A6D4CB /* SchedulePaymentsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePaymentsTVC.swift; sourceTree = "<group>"; };
+		756778201F89DB6C00A6D4CB /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		756778221F89DC4800A6D4CB /* PaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
+		756778241F89ED8E00A6D4CB /* ExpensesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesVC.swift; sourceTree = "<group>"; };
+		756778651F8A3FF500A6D4CB /* TurnOffVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnOffVC.swift; sourceTree = "<group>"; };
+		756778671F8A719600A6D4CB /* SchedulePaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePaymentVC.swift; sourceTree = "<group>"; };
+		75D9CFD11F8988FC00FD4046 /* PayBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75D9CFD61F8988FC00FD4046 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75D9CFD91F8988FC00FD4046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		75D9CFDC1F8988FC00FD4046 /* PayBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PayBuddy.xcdatamodel; sourceTree = "<group>"; };
+		75D9CFDE1F8988FC00FD4046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		75D9CFE11F8988FC00FD4046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		75D9CFE31F8988FC00FD4046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75D9CFE81F8988FC00FD4046 /* PayBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75D9CFEC1F8988FC00FD4046 /* PayBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBuddyTests.swift; sourceTree = "<group>"; };
+		75D9CFEE1F8988FC00FD4046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75D9CFF31F8988FC00FD4046 /* PayBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75D9CFF71F8988FC00FD4046 /* PayBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBuddyUITests.swift; sourceTree = "<group>"; };
+		75D9CFF91F8988FC00FD4046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75D9D0051F89890700FD4046 /* SignInUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpVC.swift; sourceTree = "<group>"; };
+		782DCEA685B3E523DB93AFF1 /* Pods-PayBuddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayBuddyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayBuddyUITests/Pods-PayBuddyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		786B4CFC7A43D9990614ACD8 /* Pods-PayBuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayBuddyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayBuddyTests/Pods-PayBuddyTests.release.xcconfig"; sourceTree = "<group>"; };
+		7D0F9710529F873646D66ED7 /* Pods-PayBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayBuddy/Pods-PayBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		B3875701D0A184EC835C419C /* Pods_PayBuddyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayBuddyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBFC9B9BE6D8E19E7CBB6111 /* Pods_PayBuddyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayBuddyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE700CC1F49646B8CBBC0655 /* Pods_PayBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75D9CFCE1F8988FC00FD4046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5291FCCDF038A3BC02D241D /* Pods_PayBuddy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75D9CFE51F8988FC00FD4046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5EC8AE2288E7290E4D9840A /* Pods_PayBuddyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75D9CFF01F8988FC00FD4046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C01F8A253AAD5F311E591F /* Pods_PayBuddyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58BABC8A6D5B68B4AA328E4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE700CC1F49646B8CBBC0655 /* Pods_PayBuddy.framework */,
+				DBFC9B9BE6D8E19E7CBB6111 /* Pods_PayBuddyTests.framework */,
+				B3875701D0A184EC835C419C /* Pods_PayBuddyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75D9CFC81F8988FC00FD4046 = {
+			isa = PBXGroup;
+			children = (
+				75D9CFD31F8988FC00FD4046 /* PayBuddy */,
+				75D9CFEB1F8988FC00FD4046 /* PayBuddyTests */,
+				75D9CFF61F8988FC00FD4046 /* PayBuddyUITests */,
+				75D9CFD21F8988FC00FD4046 /* Products */,
+				82F081751C355586533EF04E /* Pods */,
+				58BABC8A6D5B68B4AA328E4F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		75D9CFD21F8988FC00FD4046 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75D9CFD11F8988FC00FD4046 /* PayBuddy.app */,
+				75D9CFE81F8988FC00FD4046 /* PayBuddyTests.xctest */,
+				75D9CFF31F8988FC00FD4046 /* PayBuddyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75D9CFD31F8988FC00FD4046 /* PayBuddy */ = {
+			isa = PBXGroup;
+			children = (
+				756777DA1F899FC900A6D4CB /* PayBuddy.entitlements */,
+				755FD28F1F899136004B3772 /* AppDelegate.swift */,
+				75D9D0051F89890700FD4046 /* SignInUpVC.swift */,
+				756777DF1F89AFF700A6D4CB /* CustomTabBarController.swift */,
+				756778671F8A719600A6D4CB /* SchedulePaymentVC.swift */,
+				75D9CFD61F8988FC00FD4046 /* ViewController.swift */,
+				756777DD1F89ACF100A6D4CB /* MainTVC.swift */,
+				756777E11F89B17C00A6D4CB /* SchedulePaymentsTVC.swift */,
+				756778201F89DB6C00A6D4CB /* Expense.swift */,
+				756778221F89DC4800A6D4CB /* PaymentCell.swift */,
+				756778651F8A3FF500A6D4CB /* TurnOffVC.swift */,
+				756778241F89ED8E00A6D4CB /* ExpensesVC.swift */,
+				75D9CFDE1F8988FC00FD4046 /* Assets.xcassets */,
+				75D9CFE01F8988FC00FD4046 /* LaunchScreen.storyboard */,
+				75D9CFD81F8988FC00FD4046 /* Main.storyboard */,
+				75D9CFE31F8988FC00FD4046 /* Info.plist */,
+				756777DB1F89A13900A6D4CB /* GoogleService-Info.plist */,
+				75D9CFDB1F8988FC00FD4046 /* PayBuddy.xcdatamodeld */,
+			);
+			path = PayBuddy;
+			sourceTree = "<group>";
+		};
+		75D9CFEB1F8988FC00FD4046 /* PayBuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				75D9CFEC1F8988FC00FD4046 /* PayBuddyTests.swift */,
+				75D9CFEE1F8988FC00FD4046 /* Info.plist */,
+			);
+			path = PayBuddyTests;
+			sourceTree = "<group>";
+		};
+		75D9CFF61F8988FC00FD4046 /* PayBuddyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				75D9CFF71F8988FC00FD4046 /* PayBuddyUITests.swift */,
+				75D9CFF91F8988FC00FD4046 /* Info.plist */,
+			);
+			path = PayBuddyUITests;
+			sourceTree = "<group>";
+		};
+		82F081751C355586533EF04E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D0F9710529F873646D66ED7 /* Pods-PayBuddy.debug.xcconfig */,
+				1DF485D088A8D62AD96C07E7 /* Pods-PayBuddy.release.xcconfig */,
+				68CE1D5D5175DA2273DF7EA7 /* Pods-PayBuddyTests.debug.xcconfig */,
+				786B4CFC7A43D9990614ACD8 /* Pods-PayBuddyTests.release.xcconfig */,
+				74724FE34A5A3EF2E7A4301B /* Pods-PayBuddyUITests.debug.xcconfig */,
+				782DCEA685B3E523DB93AFF1 /* Pods-PayBuddyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75D9CFD01F8988FC00FD4046 /* PayBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75D9CFFC1F8988FC00FD4046 /* Build configuration list for PBXNativeTarget "PayBuddy" */;
+			buildPhases = (
+				8F949573D9817FE60863B29B /* [CP] Check Pods Manifest.lock */,
+				75D9CFCD1F8988FC00FD4046 /* Sources */,
+				75D9CFCE1F8988FC00FD4046 /* Frameworks */,
+				75D9CFCF1F8988FC00FD4046 /* Resources */,
+				CC1BE87868220FA995E77B7C /* [CP] Embed Pods Frameworks */,
+				BF26B87ACF8B7964D8DBC04D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PayBuddy;
+			productName = PayBuddy;
+			productReference = 75D9CFD11F8988FC00FD4046 /* PayBuddy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		75D9CFE71F8988FC00FD4046 /* PayBuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75D9CFFF1F8988FC00FD4046 /* Build configuration list for PBXNativeTarget "PayBuddyTests" */;
+			buildPhases = (
+				D4701AF5BAA33551A7C7A054 /* [CP] Check Pods Manifest.lock */,
+				75D9CFE41F8988FC00FD4046 /* Sources */,
+				75D9CFE51F8988FC00FD4046 /* Frameworks */,
+				75D9CFE61F8988FC00FD4046 /* Resources */,
+				A9D034B8CE414012238F77FA /* [CP] Embed Pods Frameworks */,
+				8864174148CBC0DA82E95EA3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75D9CFEA1F8988FC00FD4046 /* PBXTargetDependency */,
+			);
+			name = PayBuddyTests;
+			productName = PayBuddyTests;
+			productReference = 75D9CFE81F8988FC00FD4046 /* PayBuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		75D9CFF21F8988FC00FD4046 /* PayBuddyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75D9D0021F8988FC00FD4046 /* Build configuration list for PBXNativeTarget "PayBuddyUITests" */;
+			buildPhases = (
+				D03B84CE544577633DB8FE60 /* [CP] Check Pods Manifest.lock */,
+				75D9CFEF1F8988FC00FD4046 /* Sources */,
+				75D9CFF01F8988FC00FD4046 /* Frameworks */,
+				75D9CFF11F8988FC00FD4046 /* Resources */,
+				841265AFC0E52AD0DBFCBD2E /* [CP] Embed Pods Frameworks */,
+				59F66942DBC5B0ADC80343FE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75D9CFF51F8988FC00FD4046 /* PBXTargetDependency */,
+			);
+			name = PayBuddyUITests;
+			productName = PayBuddyUITests;
+			productReference = 75D9CFF31F8988FC00FD4046 /* PayBuddyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75D9CFC91F8988FC00FD4046 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Scott Lydon";
+				TargetAttributes = {
+					75D9CFD01F8988FC00FD4046 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					75D9CFE71F8988FC00FD4046 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 75D9CFD01F8988FC00FD4046;
+					};
+					75D9CFF21F8988FC00FD4046 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 75D9CFD01F8988FC00FD4046;
+					};
+				};
+			};
+			buildConfigurationList = 75D9CFCC1F8988FC00FD4046 /* Build configuration list for PBXProject "PayBuddy" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 75D9CFC81F8988FC00FD4046;
+			productRefGroup = 75D9CFD21F8988FC00FD4046 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75D9CFD01F8988FC00FD4046 /* PayBuddy */,
+				75D9CFE71F8988FC00FD4046 /* PayBuddyTests */,
+				75D9CFF21F8988FC00FD4046 /* PayBuddyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75D9CFCF1F8988FC00FD4046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75D9CFE21F8988FC00FD4046 /* LaunchScreen.storyboard in Resources */,
+				756777DC1F89A15B00A6D4CB /* GoogleService-Info.plist in Resources */,
+				75D9CFDF1F8988FC00FD4046 /* Assets.xcassets in Resources */,
+				75D9CFDA1F8988FC00FD4046 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75D9CFE61F8988FC00FD4046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75D9CFF11F8988FC00FD4046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59F66942DBC5B0ADC80343FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayBuddyUITests/Pods-PayBuddyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		841265AFC0E52AD0DBFCBD2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayBuddyUITests/Pods-PayBuddyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8864174148CBC0DA82E95EA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayBuddyTests/Pods-PayBuddyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F949573D9817FE60863B29B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A9D034B8CE414012238F77FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayBuddyTests/Pods-PayBuddyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF26B87ACF8B7964D8DBC04D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayBuddy/Pods-PayBuddy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC1BE87868220FA995E77B7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayBuddy/Pods-PayBuddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D03B84CE544577633DB8FE60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D4701AF5BAA33551A7C7A054 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75D9CFCD1F8988FC00FD4046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				756778211F89DB6C00A6D4CB /* Expense.swift in Sources */,
+				75D9CFDD1F8988FC00FD4046 /* PayBuddy.xcdatamodeld in Sources */,
+				756778681F8A719600A6D4CB /* SchedulePaymentVC.swift in Sources */,
+				756778661F8A3FF500A6D4CB /* TurnOffVC.swift in Sources */,
+				756777DE1F89ACF100A6D4CB /* MainTVC.swift in Sources */,
+				75D9D0061F89890700FD4046 /* SignInUpVC.swift in Sources */,
+				756777E01F89AFF700A6D4CB /* CustomTabBarController.swift in Sources */,
+				756778251F89ED8E00A6D4CB /* ExpensesVC.swift in Sources */,
+				756777E21F89B17C00A6D4CB /* SchedulePaymentsTVC.swift in Sources */,
+				756778231F89DC4800A6D4CB /* PaymentCell.swift in Sources */,
+				75D9CFD71F8988FC00FD4046 /* ViewController.swift in Sources */,
+				755FD2901F899136004B3772 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75D9CFE41F8988FC00FD4046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75D9CFED1F8988FC00FD4046 /* PayBuddyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75D9CFEF1F8988FC00FD4046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75D9CFF81F8988FC00FD4046 /* PayBuddyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75D9CFEA1F8988FC00FD4046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75D9CFD01F8988FC00FD4046 /* PayBuddy */;
+			targetProxy = 75D9CFE91F8988FC00FD4046 /* PBXContainerItemProxy */;
+		};
+		75D9CFF51F8988FC00FD4046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75D9CFD01F8988FC00FD4046 /* PayBuddy */;
+			targetProxy = 75D9CFF41F8988FC00FD4046 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		75D9CFD81F8988FC00FD4046 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75D9CFD91F8988FC00FD4046 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		75D9CFE01F8988FC00FD4046 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75D9CFE11F8988FC00FD4046 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		75D9CFFA1F8988FC00FD4046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		75D9CFFB1F8988FC00FD4046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		75D9CFFD1F8988FC00FD4046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D0F9710529F873646D66ED7 /* Pods-PayBuddy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PayBuddy/PayBuddy.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = PayBuddy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottAndTy.PayBuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		75D9CFFE1F8988FC00FD4046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DF485D088A8D62AD96C07E7 /* Pods-PayBuddy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PayBuddy/PayBuddy.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = PayBuddy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottAndTy.PayBuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		75D9D0001F8988FC00FD4046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68CE1D5D5175DA2273DF7EA7 /* Pods-PayBuddyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = PayBuddyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottAndTy.PayBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PayBuddy.app/PayBuddy";
+			};
+			name = Debug;
+		};
+		75D9D0011F8988FC00FD4046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 786B4CFC7A43D9990614ACD8 /* Pods-PayBuddyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = PayBuddyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottAndTy.PayBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PayBuddy.app/PayBuddy";
+			};
+			name = Release;
+		};
+		75D9D0031F8988FC00FD4046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74724FE34A5A3EF2E7A4301B /* Pods-PayBuddyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = PayBuddyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottAndTy.PayBuddyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PayBuddy;
+			};
+			name = Debug;
+		};
+		75D9D0041F8988FC00FD4046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 782DCEA685B3E523DB93AFF1 /* Pods-PayBuddyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = PayBuddyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottAndTy.PayBuddyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PayBuddy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75D9CFCC1F8988FC00FD4046 /* Build configuration list for PBXProject "PayBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75D9CFFA1F8988FC00FD4046 /* Debug */,
+				75D9CFFB1F8988FC00FD4046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75D9CFFC1F8988FC00FD4046 /* Build configuration list for PBXNativeTarget "PayBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75D9CFFD1F8988FC00FD4046 /* Debug */,
+				75D9CFFE1F8988FC00FD4046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75D9CFFF1F8988FC00FD4046 /* Build configuration list for PBXNativeTarget "PayBuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75D9D0001F8988FC00FD4046 /* Debug */,
+				75D9D0011F8988FC00FD4046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75D9D0021F8988FC00FD4046 /* Build configuration list for PBXNativeTarget "PayBuddyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75D9D0031F8988FC00FD4046 /* Debug */,
+				75D9D0041F8988FC00FD4046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		75D9CFDB1F8988FC00FD4046 /* PayBuddy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				75D9CFDC1F8988FC00FD4046 /* PayBuddy.xcdatamodel */,
+			);
+			currentVersion = 75D9CFDC1F8988FC00FD4046 /* PayBuddy.xcdatamodel */;
+			path = PayBuddy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 75D9CFC91F8988FC00FD4046 /* Project object */;
+}

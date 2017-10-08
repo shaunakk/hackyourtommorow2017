@@ -1,0 +1,6 @@
+framework module Pods_PayBuddy {
+  umbrella header "Pods-PayBuddy-umbrella.h"
+
+  export *
+  module * { export * }
+}
