@@ -36,7 +36,7 @@ var natural_language_understanding = new NaturalLanguageUnderstandingV1({
 });
 
 var parameters = {
-  'url': 'hackyourtommorow.herokuapp.com/historystr',
+  'url': 'hackyourtommorow.herokuapp.com/historydata',
   'features': {
     'categories': {},
     'entities': {},
@@ -74,7 +74,7 @@ request.post(
       console.log(body)
       parsedJsonHist = body
       historystr = ""
-      for (i = 0; i < 100; i++) {
+      for (i = 0; i < parsedJsonHist.MonetaryTransactionResponseList.length; i++) {
         jsondata.push({
           "expense": parsedJsonHist.MonetaryTransactionResponseList[i].TransactionDescription,
           "expenseType": parsedJsonHist.MonetaryTransactionResponseList[i].StandardIndustryCode,
