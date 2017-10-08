@@ -2,11 +2,42 @@ var express = require('express');
 var app = express();
 var https = require('https')
 var parsedJson
+var wats
 var parsedJsonHist
 var running = false
 app.set('port', (process.env.PORT || 5000));
 var request = require('request');
 var jsondata = []
+var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
+var natural_language_understanding = new NaturalLanguageUnderstandingV1({
+  'username': 'de9b6371-a828-44aa-986e-79b6c3addd5d',
+  'password': 'vkrpbiRUCA41',
+  'version_date': '2017-02-27'
+});
+
+var parameters = {
+  'url': 'hackyourtommorow.herokuapp.com/historystr',
+  'features': {
+    'categories': {},
+    'entities': {},
+    'keywords': {
+      'sentiment': false,
+      'emotion': false,
+      'limit': 1000
+    },
+    'concepts': {
+      'limit': 3
+    }
+  }
+};
+
+natural_language_understanding.analyze(parameters, function(err, response) {
+  if (err)
+    console.log('error:', err);
+  else
+    console.log(JSON.stringify(response, null, 2));
+  wats = JSON.stringify(response)
+});
 
 request.post(
   'https://api119622live.gateway.akana.com:443/account/transactions', {
@@ -21,19 +52,46 @@ request.post(
       console.log(body)
       parsedJsonHist = body
       historystr = ""
-      for (i = 0; i < parsedJsonHist.MonetaryTransactionResponseList.length; i++) {
+      for (i = 0; i < 400; i++) {
         historystr = historystr + parsedJsonHist.MonetaryTransactionResponseList[i].Description1
         jsondata.push({
           "expense": parsedJsonHist.MonetaryTransactionResponseList[i].Description1,
           "expenseType": parsedJsonHist.MonetaryTransactionResponseList[i].TransactionLevelCode,
           "date": parsedJsonHist.MonetaryTransactionResponseList[i].EffectiveDate,
-          "amount": parsedJsonHist.MonetaryTransactionResponseList[i].PostedAmount
+          "amount": parsedJsonHist.MonetaryTransactionResponseList[i].PostedAmount,
+
+
         })
+
       }
     }
   }
 );
+var dataReturn
 
+function dataWatson(data) {
+  natural_language_understanding.analyze({
+      'text': data,
+      'features': {
+        'categories': {},
+        'entities': {},
+        'keywords': {
+          'sentiment': false,
+          'emotion': false,
+          'limit': 1000
+        },
+        'concepts': {
+          'limit': 3
+        }
+      }
+    },
+    function(err, response) {
+      if (err) console.log('error:', err);
+      else console.log(JSON.stringify(response, null, 2));
+      dataReturn = response
+    });
+  return dataReturn
+}
 // function PostCodeHistory(codestring) {
 //   var userData = {
 //     "OperatingCompanyIdentifier": "815",
@@ -150,6 +208,12 @@ app.get('/person', function(req, res) {
 
 
 })
+app.get('/watson', function(req, res) {
+
+  res.send(wats)
+
+
+})
 app.get('/history', function(req, res) {
 
   res.send(parsedJsonHist)
@@ -168,10 +232,6 @@ app.get('/historystr', function(req, res) {
 
 
 })
-setInterval(function() {
-  //  PostCode(JSON.stringify(userData))
-
-}, 1000)
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
