@@ -8,7 +8,16 @@ var natural_language_understanding = new NaturalLanguageUnderstandingV1({
 var parameters = {
   'url': 'hackyourtommorow.herokuapp.com/historystr',
   'features': {
-    'categories': {}
+    'categories': {},
+    'entities': {},
+    'keywords': {
+      'sentiment': false,
+      'emotion': false,
+      'limit': 1000
+    },
+    'concepts': {
+      'limit': 3
+    }
   }
 };
 

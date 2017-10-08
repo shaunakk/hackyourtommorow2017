@@ -6,6 +6,7 @@ var parsedJsonHist
 var running = false
 app.set('port', (process.env.PORT || 5000));
 var request = require('request');
+var jsondata = []
 
 request.post(
   'https://api119622live.gateway.akana.com:443/account/transactions', {
@@ -22,6 +23,11 @@ request.post(
       historystr = ""
       for (i = 0; i < parsedJsonHist.MonetaryTransactionResponseList.length; i++) {
         historystr = historystr + parsedJsonHist.MonetaryTransactionResponseList[i].Description1
+        jsondata.push({
+          "expense": parsedJsonHist.MonetaryTransactionResponseList[i].Description1,
+          "expenseType": parsedJsonHist.MonetaryTransactionResponseList[i].TransactionLevelCode,
+          "date": parsedJsonHist.MonetaryTransactionResponseList[i].EffectiveDate
+        })
       }
     }
   }
@@ -146,6 +152,12 @@ app.get('/person', function(req, res) {
 app.get('/history', function(req, res) {
 
   res.send(parsedJsonHist)
+
+
+})
+app.get('/historydata', function(req, res) {
+
+  res.send(jsondata)
 
 
 })
