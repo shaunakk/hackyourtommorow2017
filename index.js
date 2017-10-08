@@ -2,12 +2,32 @@ var express = require('express');
 var app = express();
 var https = require('https')
 var parsedJson
+var mccData
 var wats = "NOT LOADED YET TRY AGAIN"
 var parsedJsonHist
 var running = false
 app.set('port', (process.env.PORT || 5000));
 var request = require('request');
 var jsondata = []
+fs = require('fs')
+fs.readFile('./mcc.json', 'utf8', function(err, data) {
+  if (err) {
+    return console.log(err);
+  }
+  console.log(data);
+  mccData = data
+  mccData = JSON.parse(mccData)
+});
+var mccArray
+
+function getData(num) {
+  for (i = 0; i < mccData.length; i++) {
+    if (mccData[i].mcc == num) mccArray = mccData[i].edited_description
+    console.log(mccData[i].edited_description)
+  }
+
+  return mccArray
+}
 var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 var natural_language_understanding = new NaturalLanguageUnderstandingV1({
   'username': 'de9b6371-a828-44aa-986e-79b6c3addd5d',
@@ -44,9 +64,9 @@ setTimeout(function() {
 request.post(
   'https://api119622live.gateway.akana.com:443/account/transactions', {
     json: {
-      "OperatingCompanyIdentifier": "815",
-      "ProductCode": "DDA",
-      "PrimaryIdentifier": "00000000000000822943114"
+      "OperatingCompanyIdentifier": "52",
+      "ProductCode": "CCD",
+      "PrimaryIdentifier": "00000004037670240271147"
     }
   },
   function(error, response, body) {
@@ -54,13 +74,13 @@ request.post(
       console.log(body)
       parsedJsonHist = body
       historystr = ""
-      for (i = 0; i < 400; i++) {
-        historystr = historystr + parsedJsonHist.MonetaryTransactionResponseList[i].Description1
+      for (i = 0; i < 100; i++) {
         jsondata.push({
-          "expense": parsedJsonHist.MonetaryTransactionResponseList[i].Description1,
-          "expenseType": parsedJsonHist.MonetaryTransactionResponseList[i].TransactionLevelCode,
+          "expense": parsedJsonHist.MonetaryTransactionResponseList[i].TransactionDescription,
+          "expenseType": parsedJsonHist.MonetaryTransactionResponseList[i].StandardIndustryCode,
           "date": parsedJsonHist.MonetaryTransactionResponseList[i].EffectiveDate,
           "amount": parsedJsonHist.MonetaryTransactionResponseList[i].PostedAmount,
+          "mcc": getData(parseInt(parsedJsonHist.MonetaryTransactionResponseList[i].StandardIndustryCode))
 
 
         })
