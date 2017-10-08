@@ -1,7 +1,11 @@
 var express = require('express');
 var app = express();
 var parsedJson
+var running = false
+var events = require('events');
 app.set('port', (process.env.PORT || 5000));
+var eventEmitter = new events.EventEmitter();
+
 
 app.use(express.static(__dirname + '/build'));
 
@@ -21,6 +25,7 @@ var http = require('http');
 var fs = require('fs');
 
 function PostCode(codestring) {
+  running = true
   // Build the post string from an object
   var post_data = JSON.stringify(userData);
 
@@ -41,7 +46,6 @@ function PostCode(codestring) {
     console.log("This is statusCode" + res.statusCode);
     res.setEncoding('utf8');
     res.on('data', function(chunk) {
-      console.log('Response: ' + chunk);
       parsedJson = JSON.parse(chunk, null);
 
     });
@@ -49,23 +53,31 @@ function PostCode(codestring) {
       console.log('Error Response: ' + chunk);
       return 'Error Response: ' + chunk
     });
-
   });
 
 
 
   // post the data
   post_req.write(post_data);
+  parsedJson = JSON.stringify(parsedJson)
 
   post_req.end();
-  return JSON.stringify(parsedJson)
+
+
+
+
 }
 
-
 app.get('/', function(req, res) {
-  res.send(PostCode(JSON.stringify(userData)))
-})
 
+  res.send(parsedJson)
+
+
+})
+setInterval(function() {
+
+}, 1000)
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
+PostCode(JSON.stringify(userData))
